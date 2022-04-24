@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{D938
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenCaptureWin", "Samples\ScreenCaptureWin\ScreenCaptureWin.csproj", "{FC31F535-A230-4370-B431-EA132853F4A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenCaptureMac", "Samples\ScreenCaptureMac\ScreenCaptureMac.csproj", "{E74F4280-29B9-4F32-AC00-866E1D56F9F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,12 +37,17 @@ Global
 		{FC31F535-A230-4370-B431-EA132853F4A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC31F535-A230-4370-B431-EA132853F4A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC31F535-A230-4370-B431-EA132853F4A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E74F4280-29B9-4F32-AC00-866E1D56F9F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E74F4280-29B9-4F32-AC00-866E1D56F9F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E74F4280-29B9-4F32-AC00-866E1D56F9F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E74F4280-29B9-4F32-AC00-866E1D56F9F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FC31F535-A230-4370-B431-EA132853F4A7} = {D9388CB7-E704-4066-8F62-8E79E9843758}
+		{E74F4280-29B9-4F32-AC00-866E1D56F9F2} = {D9388CB7-E704-4066-8F62-8E79E9843758}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C381D204-8A98-459F-A2DC-802DF0AB772A}

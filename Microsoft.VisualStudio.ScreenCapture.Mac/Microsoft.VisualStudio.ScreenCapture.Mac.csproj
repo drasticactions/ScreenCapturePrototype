@@ -5,11 +5,25 @@
 		<WarningsAsErrors>nullable</WarningsAsErrors>
 	</PropertyGroup>
 	
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	  <EnableCodeSigning>false</EnableCodeSigning>
+	  <UseSGen>false</UseSGen>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	  <EnableCodeSigning>false</EnableCodeSigning>
+	  <UseSGen>false</UseSGen>
+	</PropertyGroup>
 	<ItemGroup>
 		<AdditionalFiles Include="..\stylecop.json" Link="stylecop.json" />
 	</ItemGroup>
 	
 	<ItemGroup>
 	  <ProjectReference Include="..\Microsoft.VisualStudio.ScreenCapture\Microsoft.VisualStudio.ScreenCapture.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="Tools\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Tools\" />
 	</ItemGroup>
 </Project>
