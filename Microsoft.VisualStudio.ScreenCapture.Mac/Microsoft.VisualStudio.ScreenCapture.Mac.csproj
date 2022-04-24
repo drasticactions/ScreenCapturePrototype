@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0-macos</TargetFramework>
+		<WarningsAsErrors>nullable</WarningsAsErrors>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<AdditionalFiles Include="..\stylecop.json" Link="stylecop.json" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <ProjectReference Include="..\Microsoft.VisualStudio.ScreenCapture\Microsoft.VisualStudio.ScreenCapture.csproj" />
+	</ItemGroup>
+</Project>
