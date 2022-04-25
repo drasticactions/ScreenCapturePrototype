@@ -2,8 +2,10 @@
   <PropertyGroup>
     <TargetFramework>net6.0-macos</TargetFramework>
     <OutputType>Exe</OutputType>
+    <RuntimeIdentifier>osx-arm64</RuntimeIdentifier>
+    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <ImplicitUsings>true</ImplicitUsings>
+    <SelfContained>true</SelfContained>
     <SupportedOSPlatformVersion>10.14</SupportedOSPlatformVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

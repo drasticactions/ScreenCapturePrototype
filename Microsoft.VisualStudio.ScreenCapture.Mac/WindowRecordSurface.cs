@@ -20,31 +20,18 @@ namespace Microsoft.VisualStudio.ScreenCapture.Mac
             ArgumentNullException.ThrowIfNull(window, nameof(window));
 
             this.Title = window.Title ?? string.Empty;
-            this.Filter = new SCContentFilter(window);
-            this.Config = new SCStreamConfiguration();
-            this.Config.MinimumFrameInterval = new CoreMedia.CMTime(1, 60);
-            this.Stream = new SCStream(this.Filter, this.Config, null);
+            this.ScreenRecorder = new ScreenRecorder(window);
         }
 
         /// <inheritdoc/>
         public string Title { get; }
 
         /// <inheritdoc/>
-        public object CaptureSurface => this.Stream;
+        public object CaptureSurface => this.ScreenRecorder;
 
         /// <summary>
-        /// Gets the <see cref="SCStream"/>.
+        /// Gets the <see cref="ScreenRecorder"/>.
         /// </summary>
-        public SCStream Stream { get; }
-
-        /// <summary>
-        /// Gets the <see cref="SCStreamConfiguration"/>.
-        /// </summary>
-        public SCStreamConfiguration Config { get; }
-
-        /// <summary>
-        /// Gets the <see cref="SCStreamConfiguration"/>.
-        /// </summary>
-        public SCContentFilter Filter { get; }
+        public ScreenRecorder ScreenRecorder { get; }
     }
 }

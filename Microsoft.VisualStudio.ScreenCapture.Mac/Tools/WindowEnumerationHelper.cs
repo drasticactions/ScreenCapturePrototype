@@ -15,7 +15,7 @@ namespace Microsoft.VisualStudio.ScreenCapture.Mac
         {
             var list = new List<WindowRecordSurface>();
 
-            var result = await SCShareableContent.GetShareableContentAsync(true, false);
+            var result = await SCShareableContent.GetShareableContentAsync(false, true);
             foreach (var item in result.Windows)
             {
                 list.Add(new WindowRecordSurface(item));

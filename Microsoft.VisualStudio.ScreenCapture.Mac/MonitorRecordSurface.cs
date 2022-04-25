@@ -19,14 +19,7 @@ namespace Microsoft.VisualStudio.ScreenCapture.Mac
         public MonitorRecordSurface(MonitorInfo info)
         {
             ArgumentNullException.ThrowIfNull(info, nameof(info));
-            this.Filter = new SCContentFilter(info.Display, new SCWindow[0], SCContentFilterOption.Exclude);
-
-            // Set the capture size to twice the display size to support retina displays.
-            this.Config = new SCStreamConfiguration();
-            this.Config.Width = (nuint)info.Display.Width * 2;
-            this.Config.Height = (nuint)info.Display.Height * 2;
-            this.Config.MinimumFrameInterval = new CoreMedia.CMTime(1, 60);
-            this.Stream = new SCStream(this.Filter, this.Config, null);
+            this.ScreenRecorder = new ScreenRecorder(info.Display);
             this.MonitorInfo = info;
             this.Title = this.MonitorInfo.DeviceName;
         }
@@ -35,24 +28,14 @@ namespace Microsoft.VisualStudio.ScreenCapture.Mac
         public string Title { get; }
 
         /// <inheritdoc/>
-        public object CaptureSurface => this.Stream;
+        public object CaptureSurface => this.ScreenRecorder;
 
         /// <inheritdoc/>
         public IMonitor MonitorInfo { get; }
 
         /// <summary>
-        /// Gets the <see cref="SCStream"/>.
+        /// Gets the <see cref="ScreenRecorder"/>.
         /// </summary>
-        public SCStream Stream { get; }
-
-        /// <summary>
-        /// Gets the <see cref="SCStreamConfiguration"/>.
-        /// </summary>
-        public SCStreamConfiguration Config { get; }
-
-        /// <summary>
-        /// Gets the <see cref="SCStreamConfiguration"/>.
-        /// </summary>
-        public SCContentFilter Filter { get; }
+        public ScreenRecorder ScreenRecorder { get; }
     }
 }
